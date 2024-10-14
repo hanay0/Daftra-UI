@@ -1,0 +1,22 @@
+{
+  "name": "daftra-task",
+  "version": "1.0.0",
+  "description": "UI task",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanay0/Daftra-UI.git"
+  },
+  "author": "Ahmed Hanafy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanay0/Daftra-UI/issues"
+  },
+  "homepage": "https://github.com/hanay0/Daftra-UI#readme",
+  "dependencies": {
+    "bootstrap-scss": "^5.3.3"
+  }
+}

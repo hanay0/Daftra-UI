@@ -1,0 +1,85 @@
+@import "../../node_modules/bootstrap-scss/bootstrap-grid.scss";
+
+// fonts
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Bold.eot');
+    src: url('../fonts/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DMSans-Bold.woff2') format('woff2'),
+        url('../fonts/DMSans-Bold.woff') format('woff'),
+        url('../fonts/DMSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Medium.eot');
+    src: url('../fonts/DMSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DMSans-Medium.woff2') format('woff2'),
+        url('../fonts/DMSans-Medium.woff') format('woff'),
+        url('../fonts/DMSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Regular.eot');
+    src: url('../fonts/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DMSans-Regular.woff2') format('woff2'),
+        url('../fonts/DMSans-Regular.woff') format('woff'),
+        url('../fonts/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+a {
+    text-decoration: none;
+}
+
+// utility classes
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+
+// variables
+$black: #000000;
+$primary-dark: #161616;
+$primary-green: #48A74C;
+$secondary-green: #3D8E41;
+$light-green: #14A077;
+$primary-grey: #707070;
+$secondary-grey: #404040;
+$light-grey: #F7F7F7;
+
+// custom styles
+header {
+    padding: 19px 89.5px;
+    background-color: $primary-dark;
+}
