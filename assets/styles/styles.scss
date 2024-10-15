@@ -1,4 +1,4 @@
-@import "../../node_modules/bootstrap-scss/bootstrap-grid.scss";
+// @import "../../node_modules/bootstrap-scss/bootstrap-grid.scss";
 
 // fonts
 @font-face {
@@ -67,9 +67,18 @@ a {
 .align-items-end {
     align-items: flex-end;
 }
+.flex-column {
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
 
 // variables
 $black: #000000;
+$white: #ffffff;
 $primary-dark: #161616;
 $primary-green: #48A74C;
 $secondary-green: #3D8E41;
@@ -77,9 +86,170 @@ $light-green: #14A077;
 $primary-grey: #707070;
 $secondary-grey: #404040;
 $light-grey: #F7F7F7;
+$secondary-light-grey: #E6E6E6;
 
 // custom styles
 header {
     padding: 19px 89.5px;
     background-color: $primary-dark;
+
+    #logo-search {
+        #brand-logo {
+            margin-right: 46px;
+            img {
+                width: 81px;
+                height: 27px;
+            }
+        }
+
+        form {
+            position: relative;
+
+            input[type="text"] {
+                width: 451px;
+                padding-top: 17px;
+                padding-bottom: 17px;
+                padding-left: 75px;
+                background-color: $white;
+                border-radius: 47px;
+                border: 1px solid #E9E9E9;
+                line-height: 26px;
+
+                &::placeholder {
+                    color: #C4C3C3;
+                    font-size: 20px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 12px;
+                width: 24px;
+                height: 24px;
+                padding: 11.5px 13px;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M21.5221 18.7869C21.8912 19.197 21.8912 19.8123 21.4811 20.1814L20.3326 21.3298C19.9635 21.74 19.3483 21.74 18.9381 21.3298L14.8776 17.2693C14.6725 17.0642 14.5905 16.8181 14.5905 16.572V15.8748C13.1139 17.0232 11.3092 17.6794 9.34045 17.6794C4.62366 17.6794 0.809204 13.865 0.809204 9.14819C0.809204 4.47241 4.62366 0.616943 9.34045 0.616943C14.0162 0.616943 17.8717 4.47241 17.8717 9.14819C17.8717 11.158 17.1744 12.9626 16.067 14.3982H16.7233C16.9694 14.3982 17.2155 14.5212 17.4205 14.6853L21.5221 18.7869ZM9.34045 14.3982C12.2115 14.3982 14.5905 12.0603 14.5905 9.14819C14.5905 6.2771 12.2115 3.89819 9.34045 3.89819C6.42834 3.89819 4.09045 6.2771 4.09045 9.14819C4.09045 12.0603 6.42834 14.3982 9.34045 14.3982Z' fill='white'/%3E %3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $primary-green;
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    #navmenu {
+        a {
+            margin: 0 29px;
+            color: $secondary-light-grey;
+            line-height: 27px;
+            cursor: pointer;
+
+            &#profile {
+                img {
+                    border-radius: 50%;
+                }
+
+                span {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        right: -20px;
+                        width: 12px;
+                        height: 18px;
+                        background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1.33984 0.5H10.375C11.0078 0.5 11.3242 1.27344 10.8672 1.73047L6.36719 6.23047C6.08594 6.51172 5.62891 6.51172 5.34766 6.23047L0.847656 1.73047C0.390625 1.27344 0.707031 0.5 1.33984 0.5Z' fill='%23E6E6E6'/%3E %3C/svg%3E ");
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            &#separator {
+                cursor: default;    
+            }
+
+            svg {
+                font-size: 18px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+}
+
+main {
+    aside {
+        width: 440px;
+        margin-right: 24px;
+        position: sticky;
+        padding: 0 14px;
+
+        #sidemenu-heading {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 26.22px;
+            color: $secondary-grey;
+            font-weight: 500;
+            padding: 36px 0 36px 42px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #E9E9E9;
+        }
+
+        #sidemenu {
+            list-style: none;
+
+            li {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 26.22px;
+                background-color: $light-grey;
+                color: $secondary-grey;
+                padding: 19px 0 19px 30px;
+                margin-bottom: 14px;
+                border-radius: 4px;
+
+                &:has(> #submenu) {
+                    flex-direction: column;
+
+                    span {
+                        position: relative;
+                        width: 100%;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(180deg);
+                            right: 35px;
+                            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.42 8.04801L13.48 6.98701L7.70301 1.20801C7.61044 1.11486 7.50037 1.04093 7.37912 0.990482C7.25787 0.940034 7.12784 0.914062 6.99651 0.914062C6.86518 0.914062 6.73515 0.940034 6.6139 0.990482C6.49265 1.04093 6.38258 1.11486 6.29001 1.20801L0.51001 6.98701L1.57001 8.04701L6.99501 2.62301L12.42 8.04801Z' fill='black'/%3E %3C/svg%3E ");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+
+
+                #submenu {
+                    list-style: none;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    #main-content {
+        width: calc(100% - (440px + 112px));
+        padding-top: 36px;
+    }
 }
