@@ -46,3 +46,20 @@ document.addEventListener('click', function(event) {
 function toggleAlert() {
     const isChecked = document.getElementById('toggle').checked;
   }
+
+
+//   mobile menu
+document.getElementById("profile-menu-toggler").addEventListener("click", function() {
+    document.getElementById("mobile-main-menu").style.right = "0";
+    document.getElementById("transparent-layout").style.right = "-0";
+});
+
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("mobile-main-menu");
+    const toggler = document.getElementById("profile-menu-toggler");
+
+    if (!menu.contains(event.target) && !toggler.contains(event.target)) {
+        menu.style.right = "-80%";
+        document.getElementById("transparent-layout").style.right = "-100%";
+    }
+});;
