@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +54,12 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .justify-content-between {
@@ -90,6 +100,22 @@ a {
 
 .w-100 {
   width: 100%;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
 }
 
 .row {
@@ -199,6 +225,7 @@ main aside {
   margin-right: 24px;
   position: sticky;
   padding: 0 14px;
+  background-color: #ffffff;
 }
 main aside #sidemenu-heading {
   font-size: 25px;
@@ -256,11 +283,19 @@ main aside #sidemenu li #submenu.active {
 main #main-content {
   width: calc(100% - 552px);
   padding-top: 16px;
+  background-color: #F5F5F5;
+}
+main #main-content .main-content-container {
+  padding-left: 24px;
 }
 main #main-content #sort {
   position: relative;
   margin-left: auto;
   padding: 20px 27.5px;
+  -webkit-box-shadow: 0px 0px 1px #D8D8D8;
+          box-shadow: 0px 0px 1px #D8D8D8;
+  border-radius: 5px;
+  margin-bottom: 18px;
 }
 main #main-content #sort .dropdown-toggle {
   color: #404040;
@@ -294,6 +329,7 @@ main #main-content #sort .dropdown-toggle.rotated::after {
 }
 main #main-content #sort .selected-option {
   margin-left: 16px;
+  padding-right: 16px;
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
@@ -310,7 +346,7 @@ main #main-content #sort .dropdown-menu {
   margin-top: 5px;
   list-style: none;
   padding: 0;
-  top: 50px;
+  top: 65px;
   left: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -417,4 +453,85 @@ main #main-content #results-wrapper .toggle-container .toggle-switch .slider::be
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
+}
+main #main-content #items-list .card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-top: 35px;
+  margin-bottom: 14px;
+}
+main #main-content #items-list .card .card-body {
+  margin-bottom: 26.5px;
+  padding-right: 41px;
+}
+main #main-content #items-list .card .card-body #card-heading-wrapper {
+  margin-bottom: 18px;
+}
+main #main-content #items-list .card .card-body #card-heading-wrapper #card-heading h2 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 37.5px;
+  color: #161616;
+}
+main #main-content #items-list .card .card-body #card-heading-wrapper #card-heading p {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #14A077;
+}
+main #main-content #items-list .card .card-body #card-heading-wrapper #card-favourite {
+  margin-left: auto;
+}
+main #main-content #items-list .card .card-body #card-heading-wrapper #card-favourite button {
+  background-color: #ffffff;
+  border: 0.73px solid #C4C3C3;
+  padding: 16.64px 16.11px 12.87px 16.98px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main #main-content #items-list .card .card-body #location-date {
+  margin-bottom: 18px;
+}
+main #main-content #items-list .card .card-body #location-date #location {
+  margin-right: 10px;
+}
+main #main-content #items-list .card .card-body #location-date #location span,
+main #main-content #items-list .card .card-body #location-date #date span {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #707070;
+  margin-left: 6px;
+}
+main #main-content #items-list .card .card-body #vacancy-info p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.22px;
+  text-align: center;
+  color: #707070;
+  padding: 4px 18px;
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+main #main-content #items-list .card .card-body #vacancy-info p:last-of-type {
+  margin-right: 0;
+}
+main #main-content #items-list .card .card-footer {
+  padding-top: 26.5px;
+  padding-bottom: 35px;
+}
+main #main-content #items-list .card .card-footer p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #707070;
+}
+main #main-content #items-list .card .card-body,
+main #main-content #items-list .card .card-footer {
+  padding-left: 41px;
+}
+main #main-content #items-list .card #separator {
+  height: 1px;
+  background-color: #F0F0F0;
 }

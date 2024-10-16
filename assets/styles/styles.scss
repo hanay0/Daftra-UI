@@ -45,6 +45,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: #F5F5F5;
+}
+
 // utility classes
 .d-flex {
     display: flex;
@@ -54,6 +58,9 @@ a {
 }
 .justify-content-end {
     justify-content: flex-end;
+}
+.justify-content-start {
+    justify-content: flex-start;
 }
 .justify-content-between {
     justify-content: space-between;
@@ -75,6 +82,18 @@ a {
 }
 .w-100 {
     width: 100%;
+}
+.mb-auto {
+    margin-bottom: auto;
+}
+.mt-auto {
+    margin-top: auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
 }
 .row {
     display: flex;
@@ -194,6 +213,7 @@ main {
         margin-right: 24px;
         position: sticky;
         padding: 0 14px;
+        background-color: $white;
 
         #sidemenu-heading {
             font-size: 25px;
@@ -257,11 +277,19 @@ main {
     #main-content {
         width: calc(100% - (440px + 112px));
         padding-top: 16px;
+        background-color: #F5F5F5;
+
+        .main-content-container {
+            padding-left: 24px;
+        }
 
         #sort {
             position: relative;
             margin-left: auto;
             padding: 20px 27.5px;
+            box-shadow: 0px 0px 1px #D8D8D8;
+            border-radius: 5px;
+            margin-bottom: 18px;
 
             .dropdown-toggle {
                 color: $secondary-grey;
@@ -296,6 +324,7 @@ main {
               
               .selected-option {
                 margin-left: 16px;
+                padding-right: 16px;
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 26px;
@@ -312,7 +341,7 @@ main {
                 margin-top: 5px;
                 list-style: none;
                 padding: 0;
-                top: 50px;
+                top: 65px;
                 left: 0;
                 transition: all 300ms ease-in-out;
                 border-radius: 11px;
@@ -428,17 +457,110 @@ main {
                       }
                   }
               }
-              
-              
-              
-              
-            //   input:checked + .slider {
-            //     background-color: #8bc34a;
-            //   }
-              
-            //   input:checked + .slider:before {
-            //     transform: translateX(24px);
-            //   }              
+        }
+
+        #items-list {
+            // padding-top: 35px;
+            // padding-left: 41px;
+
+           .card {
+            background-color: $white;
+            border-radius: 5px;
+            padding-top: 35px;
+            margin-bottom: 14px;
+            
+
+            .card-body {
+                margin-bottom: 26.5px;
+                padding-right: 41px;
+
+                #card-heading-wrapper {
+                    margin-bottom: 18px;
+                    #card-heading {
+                        h2 {
+                            font-size: 25px;
+                            font-weight: 500;
+                            line-height: 37.5px;
+                            color: $primary-dark;
+                        }
+                        p {
+                            font-size: 17px;
+                            font-weight: 700;
+                            line-height: 24px;
+                            color: $light-green;
+                        }
+                    } 
+
+                    #card-favourite {
+                        margin-left: auto;
+                        button {
+                            background-color: $white;
+                            border: .73px solid #C4C3C3;
+                            padding: 16.64px 16.11px 12.87px 16.98px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+
+                #location-date {
+                    margin-bottom: 18px;
+                    #location {
+                        margin-right: 10px;
+                    }
+                    #location,
+                    #date {
+                        span {
+                            font-size: 17px;
+                            font-weight: 400;
+                            line-height: 27px;
+                            color: $primary-grey;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+
+                #vacancy-info {
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 26.22px;
+                        text-align: center;
+                        color: $primary-grey;
+                        padding: 4px 18px;
+                        background-color: $light-grey;
+                        border-radius: 4px;
+                        margin-right: 4px;
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .card-footer {
+                padding-top: 26.5px;
+                padding-bottom: 35px;
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    color: $primary-grey;
+                }
+            }
+
+            .card-body,
+            .card-footer {
+                padding-left: 41px;
+            }
+
+            #separator {
+                height: 1px;
+                background-color: #F0F0F0;
+            }
+           }
         }
     }
 }

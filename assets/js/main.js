@@ -43,3 +43,6 @@ document.addEventListener('click', function(event) {
         dropdownToggle.classList.remove('rotated');
     }
 });
+function toggleAlert() {
+    const isChecked = document.getElementById('toggle').checked;
+  }
